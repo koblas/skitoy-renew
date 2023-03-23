@@ -2,7 +2,7 @@
 title: Autoenv for Greatness
 date: 2016-11-19T23:23:55+00:00
 categories:
-  - development
+  - Development
 
 ---
 

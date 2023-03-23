@@ -1,9 +1,10 @@
 ---
 title: Managing Git Docker secrets with SOPS
 date: 2017-03-24T18:50:19+00:00
-categories:
-  - development
+tags:
   - docker
+categories:
+  - Development
 
 ---
 

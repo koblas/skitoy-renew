@@ -1,10 +1,6 @@
 ---
 title: SimpleDB aka why Relations are so 90’s
 date: 2007-12-31T18:20:36+00:00
-pvc_views:
-  - 2816
-dsq_thread_id:
-  - 186361180
 categories:
   - Development
 tags:

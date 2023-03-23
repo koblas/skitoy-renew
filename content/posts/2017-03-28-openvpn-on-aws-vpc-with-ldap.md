@@ -1,10 +1,12 @@
 ---
 title: OpenVPN on AWS VPC with LDAP
 date: 2017-03-28T10:39:03+00:00
-categories:
+tags:
   - devops
   - development
   - aws
+categories:
+  - devops
 
 ---
 

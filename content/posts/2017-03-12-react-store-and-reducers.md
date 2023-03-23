@@ -2,8 +2,9 @@
 title: React Store and Reducers
 date: 2017-03-12T19:42:05+00:00
 categories:
+  - Development
+tags:
   - react
-  - development
 
 ---
 

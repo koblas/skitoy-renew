@@ -1,16 +1,8 @@
 ---
 title: Competition for Customer Service
 date: 2011-11-18T18:30:05+00:00
-aktt_notify_twitter:
-  - yes
-aktt_tweeted:
-  - 1
-pvc_views:
-  - 4182
-dsq_thread_id:
-  - 476702546
 categories:
-  - Thoughts
+  - Ideas
 
 ---
 Sitting on hold with AT&T and what I&#8217;ve really noticed is besides being on the phone with them for an hour is how customer service is handled.  They&#8217;ve done everything &#8220;right&#8221; however what&#8217;s interesting is to think about how the dialog has gone as it compares to all of my training via Vail/Northstar Ski School.

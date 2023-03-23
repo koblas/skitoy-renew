@@ -1,10 +1,6 @@
 ---
 title: Python is not Java
 date: 2008-04-29T20:01:20+00:00
-pvc_views:
-  - 5253
-dsq_thread_id:
-  - 160531883
 categories:
   - Development
 tags:

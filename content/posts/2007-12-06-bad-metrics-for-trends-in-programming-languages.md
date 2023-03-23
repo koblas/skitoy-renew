@@ -1,10 +1,6 @@
 ---
 title: Bad Metrics for Trends in Programming Languages
 date: 2007-12-06T17:49:03+00:00
-pvc_views:
-  - 3877
-dsq_thread_id:
-  - 291273453
 categories:
   - Development
 tags:

@@ -1,8 +1,10 @@
 ---
 title: Better code with async and await
 date: 2017-04-01T17:59:09+00:00
+tags:
+  - javascript
 categories:
-  - draft
+  - Development
 
 ---
 

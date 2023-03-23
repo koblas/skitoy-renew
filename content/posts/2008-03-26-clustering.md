@@ -1,10 +1,6 @@
 ---
 title: Clustering …
 date: 2008-03-26T15:48:09+00:00
-pvc_views:
-  - 2464
-dsq_thread_id:
-  - 347206128
 categories:
   - Development
 tags:

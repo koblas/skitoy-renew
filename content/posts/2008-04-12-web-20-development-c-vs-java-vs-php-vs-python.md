@@ -1,10 +1,6 @@
 ---
 title: Web 2.0 development – C++ vs. Java vs. PHP vs. Python
 date: 2008-04-12T17:53:09+00:00
-pvc_views:
-  - 76055
-dsq_thread_id:
-  - 160530545
 categories:
   - Development
 tags:

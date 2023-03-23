@@ -1,10 +1,6 @@
 ---
 title: Performance Reviews a proposal!
 date: 2008-02-14T19:10:11+00:00
-pvc_views:
-  - 3658
-dsq_thread_id:
-  - 160530541
 categories:
   - Work
 tags:
