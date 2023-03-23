@@ -1,8 +1,10 @@
 ---
 title: Performance of JavaScript object reduce
 date: 2018-02-03T18:53:38+00:00
+tags:
+  - javascript
 categories:
-  - technical
+  - Development
 
 ---
 

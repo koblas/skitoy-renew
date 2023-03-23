@@ -8,7 +8,7 @@ pvc_views:
 dsq_thread_id:
   - 446215347
 categories:
-  - Work
+  - General
 tags:
   - consulting
 

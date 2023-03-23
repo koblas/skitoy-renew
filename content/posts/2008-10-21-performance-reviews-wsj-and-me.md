@@ -6,7 +6,7 @@ aktt_tweeted:
 pvc_views:
   - 2560
 categories:
-  - Work
+  - Management
 tags:
   - performance reviews
 

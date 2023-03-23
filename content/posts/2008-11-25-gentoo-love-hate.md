@@ -8,7 +8,7 @@ pvc_views:
 dsq_thread_id:
   - 184527232
 categories:
-  - Work
+  - General
 tags:
   - gentoo
 

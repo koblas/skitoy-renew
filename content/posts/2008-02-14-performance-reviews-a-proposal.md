@@ -2,7 +2,7 @@
 title: Performance Reviews a proposal!
 date: 2008-02-14T19:10:11+00:00
 categories:
-  - Work
+  - Management
 tags:
   - hr
   - performance reviews

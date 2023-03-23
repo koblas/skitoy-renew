@@ -2,11 +2,10 @@
 title: AWS Lambda Database Migrations
 date: '2019-03-22T13:53:52.000Z'
 tags:
-  - technical
   - aws
   - golang
-category: devops
-draft: false
+categories:
+  - DevOps
 ---
 
 # AWS Lambda Database Migrations

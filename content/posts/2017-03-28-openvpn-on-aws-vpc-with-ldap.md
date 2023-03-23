@@ -6,7 +6,7 @@ tags:
   - development
   - aws
 categories:
-  - devops
+  - DevOps
 
 ---
 
