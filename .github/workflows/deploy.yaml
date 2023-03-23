@@ -18,14 +18,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
       - run: npm ci
-      - run: echo ENVCLEAN $ENV_TINA_BRANCH
-      - run: echo CLEAN $TINA_BRANCH
-      - run: echo SECVARS ${{ secrets.TINA_BRANCH }}
-      - run: echo SECENVAR ${{ secrets.ENV_TINA_BRANCH }}
-      - run: echo VARS ${{ vars.TINA_BRANCH }}
-      - run: echo ENVAR ${{ vars.ENV_TINA_BRANCH }}
-      - run: echo ENV ${{ env.TINA_BRANCH }}
-      - run: echo env $tina_branch
+      - run: env
+        env:
+          TINA_BRANCH: ${{ vars.TINA_BRANCH }}
+          TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ vars.TINA_TOKEN }}
       - run: npm run build
         env:
           TINA_BRANCH: ${{ vars.TINA_BRANCH }}
