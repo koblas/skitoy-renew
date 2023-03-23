@@ -18,6 +18,9 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
       - run: npm ci
+      - run: echo VARS ${{ vars.TINA_BRANCH }}
+      - run: echo ENVAR ${{ vars.ENV_TINA_BRANCH }}
+      - run: echo ENV ${{ env.TINA_BRANCH }}
       - run: npm run build
         env:
           TINA_BRANCH: ${{ vars.TINA_BRANCH }}
