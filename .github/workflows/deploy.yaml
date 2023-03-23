@@ -20,6 +20,8 @@ jobs:
       - run: npm ci
       - run: echo ENVCLEAN $ENV_TINA_BRANCH
       - run: echo CLEAN $TINA_BRANCH
+      - run: echo SECVARS ${{ secrets.TINA_BRANCH }}
+      - run: echo SECENVAR ${{ secrets.ENV_TINA_BRANCH }}
       - run: echo VARS ${{ vars.TINA_BRANCH }}
       - run: echo ENVAR ${{ vars.ENV_TINA_BRANCH }}
       - run: echo ENV ${{ env.TINA_BRANCH }}
