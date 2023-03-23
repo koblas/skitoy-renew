@@ -6,6 +6,7 @@ on:
       - main
 
 jobs:
+  environment: production
   build:
     runs-on: ubuntu-latest
     steps:
@@ -22,7 +23,6 @@ jobs:
           X_TINA_BRANCH: ${{ vars.TINA_BRANCH }}
           X_TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
           X_TINA_TOKEN: ${{ vars.TINA_TOKEN }}
-
           X_TINA_ENV_BRANCH: ${{ env.TINA_BRANCH }}
           X_TINA_EENV_BRANCH: ${{ env.ENV_TINA_BRANCH }}
           X_TINA_SEC_BRANCH: ${{ secrets.TINA_BRANCH }}
