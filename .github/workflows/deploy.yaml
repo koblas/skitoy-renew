@@ -17,12 +17,16 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
-      - run: npm ci
       - run: env
         env:
           TINA_BRANCH: ${{ vars.TINA_BRANCH }}
           TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
           TINA_TOKEN: ${{ vars.TINA_TOKEN }}
+
+          TINA_ENV_BRANCH: ${{ vars.ENV_TINA_BRANCH }}
+          TINA_SEC_BRANCH: ${{ secrets.TINA_BRANCH }}
+          TINA_VAR_BRANCH: ${{ vars.TINA_BRANCH }}
+      - run: npm ci
       - run: npm run build
         env:
           TINA_BRANCH: ${{ vars.TINA_BRANCH }}
