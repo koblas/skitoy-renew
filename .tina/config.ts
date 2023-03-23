@@ -40,6 +40,12 @@ export default defineStaticConfig({
             name: "date",
           },
           {
+            type: "string",
+            label: "Tags",
+            list: true,
+            name: "tags",
+          },
+          {
             type: "boolean",
             name: "draft",
             label: "Draft",

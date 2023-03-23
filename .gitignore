@@ -3,3 +3,5 @@ node_modules
 .env
 resources/_gen/**
 *.swp
+public/*
+.firebase/*

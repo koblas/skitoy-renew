@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"hugo server -D\"",
     "build": "tinacms build && hugo",
+    "deploy": "firebase deploy --token=${FIREBASE_TOKEN} --non-interactive",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,8 @@
     "@tinacms/cli": "^1.0.0",
     "styled-components": "^5.3.6",
     "tinacms": "^1.0.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^11.25.1"
   }
 }
