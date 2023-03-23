@@ -1,16 +1,16 @@
 ---
 title: Better code with async and await
-date: 2017-04-01T17:59:09+00:00
-tags:
-  - javascript
+date: '2017-04-01T17:59:09.000Z'
 categories:
   - Development
-
+tags:
+  - javascript
+draft: true
 ---
 
-# TEXT HERE
+No idea what I was going to write here
 
-```
+```javascript
 import RedisSession from "redis-sessions";
 import settings from "../../config/settings";
 import InvalidTokenError from '../../lib/errors/invalidTokenError';
@@ -60,8 +60,7 @@ const apiUserAuthMiddleWare = (request, response, next) => {
 export default apiUserAuthMiddleWare;
 ```
 
-
-```
+```javascript
 import RedisSession from "redis-sessions";
 import settings from "../../config/settings";
 import InvalidTokenError from '../../lib/errors/invalidTokenError';
@@ -131,3 +130,4 @@ export default async function apiUserAuthMiddleWare(request, response, next) {
   next();
 }
 ```
+

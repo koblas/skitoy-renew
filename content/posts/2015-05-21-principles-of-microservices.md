@@ -1,16 +1,12 @@
 ---
 title: Principles of Microservices
 date: 2015-05-21T21:18:53+00:00
-pvc_views:
-  - 950
-dsq_thread_id:
-  - 3783572513
 categories:
   - Development
 tags:
   - architecture
-
 ---
+
 Some principles that should be followed when designing micro services.
 
 **Accuracy** – Fail hard or show full accurate results, never in between.

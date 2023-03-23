@@ -3,7 +3,6 @@ title: Autoenv for Greatness
 date: 2016-11-19T23:23:55+00:00
 categories:
   - Development
-
 ---
 
 This is really just a short post saying I discovered a really handy MacOS/Linux tool I hadn't seen before. [Autoenv](https://github.com/kennethreitz/autoenv) is a very handy tool for managing environments.
@@ -18,7 +17,7 @@ Setting up autoenv is pretty easy -- you should read the docs, it's pretty much 
 
 What happens is whenever you enter a directory (e.g. `cd`) the script will run anything in your `.env` file. For example:
 
-Example .env file -- 
+Example .env file --
 
     gvm use go1.7
     gvm pkgset use snaplabs
@@ -31,6 +30,7 @@ Script based configuration at it's finest.
 
 How to do autoenv for python virtual environments. What I noticed is that it's slow to do a `cd` when you're dealing with virtualenv, after a little thinking here's how to get the performance back.
 
+```bash
     # Set Python virtual environment
     env=epsilon
 
@@ -39,3 +39,4 @@ How to do autoenv for python virtual environments. What I noticed is that it's s
     if [ -z "$cur" -o "$cur" != $env ]; then
         workon $env
     fi
+```

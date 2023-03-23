@@ -1,13 +1,12 @@
 ---
 title: OpenVPN on AWS VPC with LDAP
-date: 2017-03-28T10:39:03+00:00
+date: '2017-03-28T10:39:03.000Z'
+categories:
+  - DevOps
 tags:
   - devops
   - development
   - aws
-categories:
-  - DevOps
-
 ---
 
 # Getting OpenVPN working on your AWS VPC
@@ -20,8 +19,8 @@ I recently just fought my way through getting OpenVPN community edition running 
 
 A little credit - Found these posts to be quite helpful, along with about 50 others.
 
-* [How to create an openvpn bastion machine in aws](https://techpunch.co.uk/development/how-to-create-an-openvpn-bastion-machine-in-aws)
-* [Setup PAM authentication with OpenVPNs auth PAM module](https://www.linuxsysadmintutorials.com/setup-pam-authentication-with-openvpns-auth-pam-module)
+* [How to create an openvpn bastion machine in aws](https://techpunch.co.uk/development/how-to-create-an-openvpn-bastion-machine-in-aws "")
+* [Setup PAM authentication with OpenVPNs auth PAM module](https://www.linuxsysadmintutorials.com/setup-pam-authentication-with-openvpns-auth-pam-module "")
 
 This guide is only a few steps long:
 
@@ -33,10 +32,10 @@ This guide is only a few steps long:
 
 Create your VPN instance as a bastion host, where it's on the "public" subnet of your VPC with an IP address assigned. **Do not forget that you need an instance that has Source/Dest checks disabled**
 
-**Note: Configuration Information**  
+**Note: Configuration Information**
 
 * VPC Cidr is 172.20.0.0/16
-* VPN network will be 172.29.0.0/20 
+* VPN network will be 172.29.0.0/20
 * VPN public network is 172.20.101.0/20
 * Using a Ubuntu 16.04 image
 
@@ -44,7 +43,7 @@ You need to allow UDP to port 1194 to have access to the server.
 
 ### Step 1.5 - LDAP Directory
 
-Cut to the chase, I really don't want to manage LDAP directories. This is a great cloud function and have deligated it to [Jumpcloud](https://jumpcloud.com). As of this writing I've used their services for 1 day, but happy so far.
+Cut to the chase, I really don't want to manage LDAP directories. This is a great cloud function and have deligated it to [Jumpcloud](https://jumpcloud.com ""). As of this writing I've used their services for 1 day, but happy so far.
 
 ## Step 2 - Configure OpenVPN
 
@@ -166,7 +165,7 @@ What this does:
 
 TODO: Update with an IP Tables that survies a reboot.
 
-``` shell
+```shell
 #!/bin/bash -x
 function base {
   echo "=== Boostrap Starting "
@@ -237,13 +236,13 @@ I'm currently using stacker to build my CloudFormation scripts. Here's the gener
 
 I'm using JSON in production, but I've also created a YAML version of the CloudFormation template for your quick review.
 
-[OpenVPN AWS Cloudformation](https://gist.github.com/koblas/cf63055faae509fa3ec5eeca5d695b3d)
+[OpenVPN AWS Cloudformation](https://gist.github.com/koblas/cf63055faae509fa3ec5eeca5d695b3d "")
 
 *Note:* The one thing this setup doesn't do is associate the Public IP of the instance to a DNS name. That's on my future projects list...
 
 ### Cloudformation OpenVPN template
 
-``` yaml
+```yaml
 Description: EC2 OpenVPN host
 Mappings:
   AmiMap:
@@ -448,5 +447,3 @@ Resources:
       VpcId:
         Ref: VpcId
 ```
-
-

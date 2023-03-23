@@ -1,26 +1,23 @@
 ---
 title: Performance of JavaScript object reduce
-date: 2018-02-03T18:53:38+00:00
-tags:
-  - javascript
+date: '2018-02-03T18:53:38.000Z'
 categories:
   - Development
-
+tags:
+  - javascript
 ---
-
 
 ## Performance of JavaScript object reduce
 
 Just a short post to look at assumptions. A few weeks ago was having one of those classic debates with a co-worker about the performance of object construction. Since with ES6 it is very easy to write:
 
-```
+```javascript
 const obj = data.reduce((acc, [k, v]) => ({ ...acc, [k]: v }), {});
 ```
 
-I had internally always made the assumption that JavaScript's runtime was making some [tail call](https://en.wikipedia.org/wiki/Tail_call) style optimizations on object reduce. But, after the discussion I realized that you should measure and not assume.
+I had internally always made the assumption that JavaScript's runtime was making some [tail call](https://en.wikipedia.org/wiki/Tail_call "") style optimizations on object reduce. But, after the discussion I realized that you should measure and not assume.
 
 So measure we did, only to find that while it's short in syntax it's slow in performance:
-
 
 | Function | 10 items | 100 items | 1000 items | 10000 items |
 |---|---:|---:|---:|---:|
@@ -28,13 +25,13 @@ So measure we did, only to find that while it's short in syntax it's slow in per
 | reduceTail | 0.117997 | 1.777858  | 110.682865 | 11794.382281 |
 | reduceAssign | 0.090573 | 0.161337 | 0.420563 | 2.184986 |
 
-_This is on the 8.9.0 node runtime. All times are in 'ms'_
+*This is on the 8.9.0 node runtime. All times are in 'ms'*
 
 What you can see is this is pretty close to a exponentail growth based on the number of items. Sure it's fast enough if it's a small object (~10 items) but, very quickly grows if it's anything of size.
 
 The test program (run at each of the different input counts)
 
-```
+```javascript
 const {
   performance,
   PerformanceObserver
@@ -86,3 +83,4 @@ wrapTail();
 wrapAssign();
 
 ```
+

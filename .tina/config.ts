@@ -44,6 +44,7 @@ export default defineStaticConfig({
             type: "string",
             label: "Category",
             name: "categories",
+            list: true,
             options: ["Development", "Management", "DevOps", "Ideas", "General"],
           },
           {
