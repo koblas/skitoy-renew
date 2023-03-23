@@ -1,9 +1,10 @@
 ---
 title: From sqlx to db - golang ORMs
 date: 2018-03-22T18:43:22+00:00
-categories:
-  - technical
+tags:
   - golang
+categories:
+  - Development
 
 ---
 
