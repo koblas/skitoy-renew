@@ -40,12 +40,16 @@ import os
 def lambda_handler(event, context):
     for r in event.get("Records",[]):
         key = r.get("s3", {}).get("object", "").get("key", "")
-
         table = key.strip("/").split("/")[0]
 
         print( "Invoking migrations on table={} objectkey={}".format(table, key))
 
-        os.system("./migrate -source s3://%s/%s/ -database %s up" % (os.environ["S3BUCKET"], table, os.environ["DATABASE"].replace("DB_NAME", table)))
+        os.system(
+            "./migrate -source s3://%s/%s/ -database %s up" % (
+                    os.environ["S3BUCKET"], 
+                    table, 
+                    os.environ["DATABASE"].replace("DB_NAME", table)
+            ))
 ```
 
 ### Key feature
