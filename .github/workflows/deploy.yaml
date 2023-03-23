@@ -20,9 +20,9 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          TINA_BRANCH: ${{ env.TINA_BRANCH }}
-          TINA_CLIENT_ID: ${{ env.TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ env.TINA_TOKEN }}
+          TINA_BRANCH: ${{ vars.TINA_BRANCH }}
+          TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ vars.TINA_TOKEN }}
       - run: npm run deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
