@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: true
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v3
         with:
@@ -18,17 +20,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
-      - run: env
-        env:
-          X_TINA_BRANCH: ${{ vars.TINA_BRANCH }}
-          X_TINA_CLIENT_ID: ${{ vars.TINA_CLIENT_ID }}
-          X_TINA_TOKEN: ${{ vars.TINA_TOKEN }}
-          X_TINA_ENV_BRANCH: ${{ env.TINA_BRANCH }}
-          X_TINA_EENV_BRANCH: ${{ env.ENV_TINA_BRANCH }}
-          X_TINA_SEC_BRANCH: ${{ secrets.TINA_BRANCH }}
-          X_TINA_SENV_BRANCH: ${{ secrets.ENV_TINA_BRANCH }}
-          X_TINA_VAR_BRANCH: ${{ vars.TINA_BRANCH }}
-          X_TINA_VENV_BRANCH: ${{ vars.ENV_TINA_BRANCH }}
       - run: npm ci
       - run: npm run build
         env:
