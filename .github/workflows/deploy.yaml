@@ -20,6 +20,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
+        with:
+          extended: true
       - run: npm ci
       - run: npm run build
         env:
