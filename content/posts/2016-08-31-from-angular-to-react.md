@@ -23,7 +23,7 @@ There are way too many blog posts take build the ToDo application, or overly sim
 
 For starters &#8211;
 
-<img width="242" height="300" src="/posts/Screen-Shot-2016-08-31-at-12.08.47-PM.png" alt="Login Content" />
+<img width="242" height="300" src="/uploads/Screen-Shot-2016-08-31-at-12.08.47-PM.png" alt="Login Content" />
 
 Is a fairly complicated React application, it involves:
 

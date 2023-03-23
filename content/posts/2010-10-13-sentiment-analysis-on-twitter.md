@@ -16,4 +16,4 @@ What&#8217;s interesting is that this posting reminded me of a Facebook &#8220;p
 
 Kristin has of course indicated that this is &#8220;unhappy&#8221;, and her followers have concurred.  In this case I would consider it agreement with the original sentiment, rather than disagreement&#8230;
 
-<img title="Sentiment.jpg" src="/posts/Sentiment.jpg" border="0" alt="Screen capture" width="600" height="326" />
+<img title="Sentiment.jpg" src="/uploads/Sentiment.jpg" border="0" alt="Screen capture" width="600" height="326" />
