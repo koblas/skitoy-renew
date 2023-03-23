@@ -19,9 +19,10 @@ jobs:
         uses: peaceiris/actions-hugo@v2
       - run: npm ci
       - run: npm run build
-      - run: npm run deploy
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           TINA_BRANCH: ${{ env.TINA_BRANCH }}
           TINA_CLIENT_ID: ${{ env.TINA_CLIENT_ID }}
           TINA_TOKEN: ${{ env.TINA_TOKEN }}
+      - run: npm run deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
