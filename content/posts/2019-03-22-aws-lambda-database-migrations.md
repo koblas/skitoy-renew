@@ -1,6 +1,6 @@
 ---
 title: AWS Lambda Database Migrations
-date: '2019-03-22T13:53:52.000Z'
+date: "2019-03-22T13:53:52.000Z"
 tags:
   - technical
   - aws
@@ -20,13 +20,13 @@ Build a lambda function that will apply database migrations when migrations are 
 
 ## Flyway vs Migrate (Java vs Go)
 
-When looking and standalone database migration tools, there are two really good choices [flyway](https://flywaydb.org/ "") or [migrate](https://github.com/golang-migrate/migrate ""). From my experience there are a few key differences between these projects:
+When looking and standalone database migration tools, there are two really good choices [flyway](https://flywaydb.org/) or [migrate](https://github.com/golang-migrate/migrate). From my experience there are a few key differences between these projects:
 
-* migrate - supports "network" migration directories (e.g. S3)
-* flyway - better rollback support (migrations are transactions)
-* flyway - better schema version tracking
-* migrate - golang
-* flyway - java
+- migrate - supports "network" migration directories (e.g. S3)
+- flyway - better rollback support (migrations are transactions)
+- flyway - better schema version tracking
+- migrate - golang
+- flyway - java
 
 I currently use flyway on a "daily" bases for my day-job, I've used migrate for some personal projects. The key feature that is required for this project is the ability to read S3 -- otherwise the first list of my lambda is going to be copy the S3 bucket locally.
 
@@ -46,8 +46,8 @@ def lambda_handler(event, context):
 
         os.system(
             "./migrate -source s3://%s/%s/ -database %s up" % (
-                    os.environ["S3BUCKET"], 
-                    table, 
+                    os.environ["S3BUCKET"],
+                    table,
                     os.environ["DATABASE"].replace("DB_NAME", table)
             ))
 ```
@@ -67,7 +67,7 @@ Something like:
      2_create_widget_table.up.sql
 ```
 
-*Note: usually `1`, `2` are `YYYYMMDDHHMM` timestamps.*
+_Note: usually `1`, `2` are `YYYYMMDDHHMM` timestamps._
 
 ### Problem
 
@@ -85,7 +85,7 @@ The first version was just going to wrap the cli method and call with a whacked 
 
 After being really frustrated, looked and found that migrate is actually built to be a library. Where they give this quick example:
 
-```golang
+```go
 import (
     "github.com/golang-migrate/migrate/v4"
     _ "github.com/golang-migrate/migrate/v4/database/postgres"
@@ -102,7 +102,7 @@ func main() {
 
 With that example in hand and a little bit of elbow grease, quickly converted it into a full fledged AWS Lambda function. Taking into account some of the code from the original python version.
 
-```golang
+```go
 package main
 
 import (
@@ -166,9 +166,9 @@ func main() {
 
 Double check the obvious:
 
-* AWS Policies to create EIP
-* AWS Policies to access S3 bucket
-* AWS Policies to run on S3 events
+- AWS Policies to create EIP
+- AWS Policies to access S3 bucket
+- AWS Policies to run on S3 events
 
 The short list of things that caused problems at the end:
 
@@ -184,17 +184,17 @@ The hardest final bug to find and fix turned out that since the VPC only contain
 
 What you need to do to create a lambda function that does database migrations inclues the following steps:
 
-* Create VPC
-* Create RDS in VPC
-* Create S3 bucket to host migrations
-* Lambda: Create Role for Lambda Function
-* Lambda: Create Policy that allows `s3:ListBucket` and `s3:*Object` access
-* Lambda: Create Policy that allows ec2:EIP Access
-* Lambda: Create Policy that allows for writing CloudWatch logs
-* Lambda: Create the lambda function
-* SNS: Create SNS event topic
-* Lambda: Create Permission to execute from S3 Event
-* Subscribe Lambda to SNS topic for S3 events
-* VPC: Create route from VPC to S3 bucket
+- Create VPC
+- Create RDS in VPC
+- Create S3 bucket to host migrations
+- Lambda: Create Role for Lambda Function
+- Lambda: Create Policy that allows `s3:ListBucket` and `s3:*Object` access
+- Lambda: Create Policy that allows ec2:EIP Access
+- Lambda: Create Policy that allows for writing CloudWatch logs
+- Lambda: Create the lambda function
+- SNS: Create SNS event topic
+- Lambda: Create Permission to execute from S3 Event
+- Subscribe Lambda to SNS topic for S3 events
+- VPC: Create route from VPC to S3 bucket
 
 Sorry, I don't yet have a GitHub with everything as a package.
