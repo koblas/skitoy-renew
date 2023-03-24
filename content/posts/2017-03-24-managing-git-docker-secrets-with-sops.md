@@ -5,9 +5,8 @@ tags:
   - docker
 categories:
   - Development
+featured: true
 ---
-
-# Managing Git/Docker secrets with SOPS
 
 The classic problem in cloud engineering is that you have a bunch of API keys, secrets and passwords you need to have available to your code but not available to others. The ideal solution looks like:
 

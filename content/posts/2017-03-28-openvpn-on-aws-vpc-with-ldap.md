@@ -9,8 +9,6 @@ tags:
   - aws
 ---
 
-# Getting OpenVPN working on your AWS VPC
-
 I recently just fought my way through getting OpenVPN community edition running on our AWS VPC environment and wanted to share so that other can learn. There are a few key take aways and I'm just going to focus on the key elements.
 
 1. Past experience has shown that you don't want to use 192.168.X.X or 10.0.X.X as your VPN networks. They are frequently used by home routers and having people configure into the VPN with that network conflict isn't worth the effort.

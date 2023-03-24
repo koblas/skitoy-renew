@@ -9,7 +9,7 @@ tags:
   - golang
 ---
 
-# GraphQL DateTime Scalar Value
+## GraphQL DateTime Scalar Value
 
 Strings are not your friend when it comes to date time types. The problem is that with the naive definition you'll get the wrong value. For starters the naive definition looks like this:
 

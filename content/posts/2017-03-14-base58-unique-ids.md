@@ -6,8 +6,6 @@ categories:
   - Development
 ---
 
-# Unique IDs
-
 TL;DR version - Use UUIDs, but make them save space.
 
 ## Generating Unique IDs

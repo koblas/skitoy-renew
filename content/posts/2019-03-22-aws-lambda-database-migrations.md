@@ -8,8 +8,6 @@ categories:
   - DevOps
 ---
 
-# AWS Lambda Database Migrations
-
 Software development and deployment is very much like an adventure game. Where you're faced with puzzles that might take you a day to solve, by picking up pieces and stumbling around in a dark room. Once you've figured it out, you could go back and solve the puzzle in 10 minutes.
 
 One of the manage challenges with serverless based architectures is that when you introduce a relational database sitting in a VPC you have more moving pieces. With every SQL DB you have the challenge of schema migrations and how to apply them. Traditionally this is done by having a machine or VPN tunnel somewhere that can talk to the database and apply migrations from the command line. With serverless you just have a lonely DB sitting in a VPC which is ideally isolated.

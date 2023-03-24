@@ -8,7 +8,7 @@ categories:
 
 ---
 
-# Switching from sqlx to db.v3	
+
 Short post -- ended up switching from [sqlx](https://github.com/jmoiron/sqlx) to [db.v3](https://github.com/upper/db) since I felt that the sqlx layer was more likely to be error prone.
 
 ### db.v3 example

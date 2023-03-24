@@ -7,8 +7,6 @@ tags:
   - react
 ---
 
-# React Store and Reducers
-
 Writing a react and redux appliction is a great experience, we all have seen the vision of great applications. However every time you sit down to work on your application there are times that the boilerplate is killing you. In most Redux applications you start seeing it very quickly, since there are great initial demos of "Todo" or other classic applications.
 
 The question is how to create great patterns that scale, rather than great demos that give a flavor.
