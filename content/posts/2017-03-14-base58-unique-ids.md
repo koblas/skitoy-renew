@@ -1,9 +1,9 @@
 ---
 title: Base58 Unique IDs
 date: 2017-03-14T13:11:41+00:00
+featured: true
 categories:
   - Development
-
 ---
 
 # Unique IDs
@@ -74,4 +74,3 @@ Your quick python example, that's it Unique Keys in "one" line of code.
 def idGen():
    return b58encode((uuid.uuid4()).bytes)
 ```
-

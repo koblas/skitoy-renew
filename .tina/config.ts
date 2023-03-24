@@ -59,6 +59,11 @@ export default defineStaticConfig({
             label: "Draft",
           },
           {
+            type: "boolean",
+            name: "featured",
+            label: "Featured",
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Body",
