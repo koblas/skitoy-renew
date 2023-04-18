@@ -37,6 +37,13 @@ BenchmarkMatrix / Cnt2000000000000000000 - 10       94450698      12.48  ns / op
 
 ```
 
+Sidebar about using floating point for counting digits, this is much harder than it looks. For example
+in go (floating point) you  end up with `math.Log10(1_000_000_000_000_010)` = `15.000000000000005` and
+`math.Log10(1_000_000_000_000_000)` = `14.999999999999998`. In JavaScript you get something else 
+`Math.log10(1_000_000_000_000_000)` = `15` and `Math.log10(  999_999_999_999_999)` = `15`. So in general
+using floating point Log10 is error prone.
+
+
 The source code for reference
 
 digits.go
